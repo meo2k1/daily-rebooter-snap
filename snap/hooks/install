@@ -1,10 +1,5 @@
-#!/bin/sh -e
+#!/bin/bash
 
-
-#this script runs once at the installation. place your code below
-echo "You are installing the app"
-
-
-
-
-echo "hello" > "$SNAP_DATA/hello.conf"
+if [[ ! -f $SNAP_DATA/config.txt ]]; then
+    echo -n 00:00 > $SNAP_DATA/config.txt;
+fi   

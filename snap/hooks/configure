@@ -1,0 +1,14 @@
+#!/bin/bash
+
+time=`snapctl get "time" 2> /dev/null`
+if [[ -z $time ]]; then
+   exit 0;
+fi
+
+if [[ $time == "off" || "$time" =~ ^(0[1-9]|1[0-2]):([0-5][0-9])$ ]]; then
+    echo -n $time > $SNAP_DATA/config.txt;
+    snapctl restart daily-rebooter
+else
+    echo "Given input is no time";
+fi  
+
