@@ -1,7 +1,7 @@
 name: daily-rebooter
 title: Daily rebooter
 version: '10'
-base: core24
+base: core22
 summary: Reboot every day at a given time
 contact: sportogo@miezal.net
 source-code: https://github.com/meo2k1/daily-rebooter-snap
